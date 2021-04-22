@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:lottie_fileName="hospital.json"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="custom"
+            app:errorEnabled="true"
+            android:id="@+id/usernameLayout"
+            android:layout_margin="7dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:startIconDrawable="@drawable/ic_baseline_account_circle_24"
+            android:hint="Username">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/UsernameText"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                android:id="@+id/emailLayout"
+                app:endIconMode="clear_text"
+                android:layout_margin="7dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/ic_baseline_email_24"
+                android:hint="Email">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/emailText" />
+
+            <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_margin="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="password_toggle"
+            android:id="@+id/passwordLayout"
+            app:errorEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/passwordField"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:id="@+id/RegisterButton"
+            android:layout_margin="7dp"
+            android:text="REGISTER"
+            android:textSize="36sp" >
+
+        </com.google.android.material.button.MaterialButton>
+
+
+        <TextView
+            android:id="@+id/goBackLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Already Have Account"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
